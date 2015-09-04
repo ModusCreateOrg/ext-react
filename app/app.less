@@ -1,3 +1,5 @@
+@import "common.less";
+
 .stretch() {
   height: 100%;
   width: 100%;
@@ -21,9 +23,9 @@ body, html {
 
 #sidebar {
   width: 150px;
-  -webkit-box-shadow: inset -8px 0px 3px -6px rgba(107,107,107,1);
-  -moz-box-shadow: inset -8px 0px 3px -6px rgba(107,107,107,1);
-  box-shadow: inset -8px 0px 3px -6px rgba(107,107,107,1);
+  -webkit-box-shadow: inset -8px 0px 3px -6px @shadowy;
+  -moz-box-shadow: inset -8px 0px 3px -6px @shadowy;
+  box-shadow: inset -8px 0px 3px -6px @shadowy;
   padding: 6px 0 0 6px;
 
   a {
@@ -34,7 +36,7 @@ body, html {
     text-transform: capitalize;
     font-size: 14px;
     margin: 10px 0 6px 0;
-    color: #034F5D;
+    color: @shallowblue;
   }
 }
 
