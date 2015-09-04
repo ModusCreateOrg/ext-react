@@ -26,6 +26,7 @@ Bonus steps. These are not required, but may be fun or helpful.
   - [ ] How to run the demos
   - [ ] How to write new demos
   - [ ] JSX fundamentals
+  - [ ] Virtual DOM
   - [ ] ES6 primer
 - [x] Class system
   - [x] Hello World
