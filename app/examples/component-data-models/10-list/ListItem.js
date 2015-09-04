@@ -6,13 +6,20 @@ export default class ListContainer extends Component {
     onClick: PropTypes.func
   }
 
+  static contextTypes = {
+    filter: PropTypes.instanceOf(RegExp)
+  }
+
   render() {
     const { text, onClick } = this.props;
+    const { filter } = this.context;
 
     return (
-      <div className="listitem" onClick={onClick}>
-        {text}
-      </div>
+      <div className="listitem" onClick={onClick}
+        dangerouslySetInnerHTML={{
+          __html: text.replace(filter, (match, p1) => p1 ? `<strong>${p1}</strong>` : '')
+        }}
+      ></div>
     );
   }
 }

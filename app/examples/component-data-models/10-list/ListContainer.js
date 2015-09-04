@@ -3,10 +3,10 @@ import ListHeader from './ListHeader';
 import Filter from './Filter';
 import './list.less';
 
-const { string } = PropTypes;
+const { any } = PropTypes;
 
 function filterProducts(filter) {
-  const regExpFilter = new RegExp(filter, 'i');
+  const regExpFilter = filter;
   return function(item) {
     return item.text.search(regExpFilter) > -1;
   };
@@ -14,7 +14,7 @@ function filterProducts(filter) {
 
 export default class ListContainer extends Component {
   static childContextTypes = {
-    filter: string
+    filter: any
   }
 
   getChildContext() {
@@ -25,7 +25,7 @@ export default class ListContainer extends Component {
 
   onFilterChange(ev) {
     const { value } = ev.target;
-    this.setState({filter: value});
+    this.setState({filter: new RegExp(`(${value})`, 'ig')});
   }
 
   render() {
@@ -65,7 +65,7 @@ export default class ListContainer extends Component {
   }
 
   state = {
-    filter: '',
+    filter: new RegExp(),
 
     products: {
       'Fruit': [
