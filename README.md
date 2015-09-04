@@ -1,6 +1,24 @@
 # ext-react
 Helping Ext JS developers get up to speed with React
 
+## Q&A
+**Q:** `sencha app watch` doesn't work here. How do I run this thing?
+
+
+**A:** That's a wonderful question. Thank you for checking out this repo. Your business is very valuable to us. You're amazing. How's the cave?
+
+1. Run `npm install`. Please don't `sudo`. That's a n👀bie thing to do.
+2. Run `npm start`
+3. Navigate your browser to `http://localhost:3000`
+
+Bonus steps. These are not required, but may be fun or helpful. 
+
+- Use Chrome
+- Install [React Dev Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+- Enable [experimental support for ES6](chrome://flags/#enable-javascript-harmony) in Chrome: `chrome://flags/#enable-javascript-harmony`
+
+----
+
 **Todo** (in no particular order):
 
 - [ ] Intro
