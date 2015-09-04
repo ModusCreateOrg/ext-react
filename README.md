@@ -1,2 +1,51 @@
 # ext-react
 Helping Ext JS developers get up to speed with React
+
+**Todo** (in no particular order):
+
+- [ ] Intro
+  - [ ] Requirements (experience, etc)
+  - [ ] How to run the demos
+  - [ ] How to write new demos
+  - [ ] JSX fundamentals
+  - [ ] ES6 primer
+- [x] Class system
+  - [x] Hello World
+  - [x] Hello user
+- [ ] Component data models
+  - [ ] Properties
+  - [ ] State
+  - [ ] Context
+  - [x] Combine all in one example (List)
+- [ ] JSX vs Object notation
+- [ ] When JSX is not enough - dynamic component creation
+- [ ] React.factory and cloning 
+- [ ] Styling
+- [ ] Flux
+- [ ] Flux vs MVC/MVVC/MVVM
+- [ ] Stateless components (may require the next version of React)
+- [ ] Components vs Containers
+- [ ] Architecture
+  - [ ] Bootstrapping an app from scratch
+    - [ ] `npm init`
+    - [ ] Managing dependencies
+    - [ ] File/Folder structure
+    - [ ] index.html
+    - [ ] Sample hello world app
+  - [ ] Webpack vs JSPM
+  - [ ] Conventions
+- [ ] Creating a custom libray/plugin
+  - [ ] Creating a sample library
+  - [ ] Including the sample library (`npm link`, `import`,...)
+  - [ ] Publishing on npm
+- [ ] How ES6 helps deliver better components
+  - [ ] Fix autobinding
+  - [ ] `import` (modules)
+  - [ ] Grouping modules in one package (hint: folder - index.js)
+  - [ ] Using object spread in JSX
+  - [ ] Tricks with destructuring
+  - [ ] ... (add more)
+- [ ] Hot Reloading
+- [ ] Universal (isomorphic) apps
+- [ ] React Router
+- [ ] Redux
