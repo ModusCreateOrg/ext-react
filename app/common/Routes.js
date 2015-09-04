@@ -8,25 +8,32 @@ let key = 0;
 
 for (const chapterName of Object.keys(Examples)) {
   const chapterExamples = Examples[chapterName];
-  const childRoutes = [];
-  const route = {
-    path: `${chapterName}`
-  };
-  links.push(<h1 key={key++}>{chapterName}</h1>);
 
-  for (const exampleName of Object.keys(chapterExamples)) {
-    const example = chapterExamples[exampleName];
-    const path = `/${chapterName}/${exampleName}`;
+  if (typeof chapterExamples === 'object') {
+    const humanChapterName = chapterName.match(/[A-Za-z][a-z]*/g).join(' ');
+    const childRoutes = [];
+    const route = {
+      path: `${chapterName}`
+    };
 
-    links.push(<Link to={path} key={key++}>{exampleName}</Link>);
-    childRoutes.push({
-      path: `${exampleName}`,
-      component: example
-    });
+    links.push(<h1 key={key++}>{humanChapterName}</h1>);
+
+    for (const exampleName of Object.keys(chapterExamples)) {
+      const example = chapterExamples[exampleName];
+      if (typeof example === 'function') {
+        const path = `/${chapterName}/${exampleName}`;
+
+        links.push(<Link to={path} key={key++}>{exampleName}</Link>);
+        childRoutes.push({
+          path: `${exampleName}`,
+          component: example
+        });
+      }
+    }
+
+    route.childRoutes = childRoutes;
+    routes.push(route);
   }
-
-  route.childRoutes = childRoutes;
-  routes.push(route);
 }
 
 export default routes;
