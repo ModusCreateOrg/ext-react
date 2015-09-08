@@ -53,7 +53,7 @@ Bonus steps. These are not required, but may be fun or helpful.
     - [ ] Sample hello world app
   - [ ] Webpack vs JSPM
   - [ ] Conventions
-- [ ] Creating a custom libray/plugin
+- [ ] Creating a custom library/plugin
   - [ ] Creating a sample library
   - [ ] Including the sample library (`npm link`, `import`,...)
   - [ ] Publishing on npm
