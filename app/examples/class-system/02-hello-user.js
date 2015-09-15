@@ -15,7 +15,7 @@ class HelloUser extends Component {
       border: '1px solid red'
     };
     return (
-        <div className="greeting" style={msgStyle}>Hello {user}!</div>
+      <div className="greeting" style={msgStyle}>Hello {user}!</div>
     );
   }
 }
