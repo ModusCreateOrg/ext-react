@@ -1,13 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 
-export default class ListContainer extends Component {
+export default class ListItem extends Component {
   static propTypes = {
     text: PropTypes.string.isRequired,
     onClick: PropTypes.func
   }
 
   static contextTypes = {
-    filter: PropTypes.instanceOf(RegExp)
+    filter: PropTypes.instanceOf(RegExp).isRequired
   }
 
   render() {
