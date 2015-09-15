@@ -3,8 +3,6 @@ import ListHeader from './ListHeader';
 import Filter from './Filter';
 import './list.less';
 
-const { any } = PropTypes;
-
 function filterProducts(filter) {
   const regExpFilter = filter;
   return function(item) {
@@ -14,7 +12,7 @@ function filterProducts(filter) {
 
 export default class ListContainer extends Component {
   static childContextTypes = {
-    filter: any
+    filter: PropTypes.instanceOf(RegExp)
   }
 
   getChildContext() {
