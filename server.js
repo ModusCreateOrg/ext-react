@@ -6,15 +6,15 @@ const config = require('./webpack.config');
 
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
-  hot: true,
+  hot: !process.env.PORT,
   historyApiFallback: true,
   stats: {
     colors: true,
   },
-}).listen(3000, 'localhost', function(err) {
+}).listen(process.env.PORT || 3000, function(err) {
   if (err) {
     console.log(err);
   }
 
-  console.log('Listening at localhost:3000');
+  console.log('Listening...');
 });
