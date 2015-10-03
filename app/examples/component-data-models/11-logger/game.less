@@ -1,24 +1,34 @@
+// @import '../../../../../../node_modules/ionicons/less/ionicons.less';
+@import '~ionicons/less/ionicons';
+
 .board {
     margin: 1em;
     min-width: 250px;
 }
 
 .symbol {
-    display: inline-block;
-    font-size: 30px;
-    width: 80px;
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
-    border: 1px solid #efefef;
-    user-select: none;
-    -webkit-user-select: none;
-    cursor: default;
+  .ion();
+  display: inline-flex;
+  font-size: 30px;
+  width: 80px;
+  height: 80px;
 
-    &:nth-child(2) {
-        border-left: none;
-        border-right: none;
-    }
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  border: 1px solid #efefef;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+
+  &:nth-child(2) {
+    border-left: none;
+    border-right: none;
+  }
 }
 
 .row {
@@ -30,3 +40,93 @@
     }
 }
 
+.result {
+  width: 140px;
+  font-size: 8px;
+  display: inline-block;
+  padding-top: 10px;
+  &:before {
+    font-size: 4em;
+  }
+
+  &.valid {
+    background-color: rgba(30,200,30, 0.2);
+  }
+}
+
+.notext {
+  .text {
+    display: none;
+  }
+}
+
+.symbol {
+  &.icon-A {
+    .notext;
+    &::before {
+      content: @ionicon-var-android-camera;
+    }
+  }
+  &.icon-B {
+    .notext;
+    &::before {
+      content: @ionicon-var-android-train;
+    }
+  }
+  &.icon-C {
+    .notext;
+    &::before {
+      content: @ionicon-var-pizza;
+    }
+  }
+  &.icon-X {
+    .notext;
+    &::before {
+      content: @ionicon-var-ios-contact;
+    }
+  }
+  &.icon-Y {
+    .notext;
+    &::before {
+      content: @ionicon-var-ios-star;
+    }
+  }
+  &.icon-Z {
+    .notext;
+    &::before {
+      content: @ionicon-var-shuffle;
+    }
+  }
+  &.icon-Foo {
+    .notext;
+    &::before {
+      content: @ionicon-var-wand;
+    }
+  }
+  &.icon-Bar {
+    .notext;
+    &::before {
+      content: @ionicon-var-soup-can;
+    }
+  }
+  &.icon-Baz {
+    .notext;
+    &::before {
+      content: @ionicon-var-pin;
+    }
+  } 
+}
+
+.gameon {
+  display: none;
+}
+
+.win {
+  .ion();
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  background-color: rgba(30, 200, 30, 0.2);
+  margin: 20px;
+  padding: 1em;
+}

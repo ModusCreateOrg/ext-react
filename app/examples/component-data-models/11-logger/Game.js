@@ -59,7 +59,7 @@ export default class Game {
     // reset board
     board.length = 0;
 
-    this.selectedSymbols = selectedSymbols;
+    this.gameSymbols = selectedSymbols;
 
     // create shuffled rows
     for (i = 0; i < rows; i++) {

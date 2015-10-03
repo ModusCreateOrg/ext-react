@@ -3,7 +3,7 @@ import Game from './Game';
 
 const MicroCell = ({ symbol }) => (
   <div className={`symbol icon-${symbol}`}>
-    {symbol}
+    <span className="text">{symbol}</span>
   </div>
 );
 
@@ -28,8 +28,8 @@ export default class Board extends Component {
 
     return (
       <div className="board">
-        {board.map(row => <div className="row">
-          {row.map(cell => <MicroCell symbol={cell.symbol} />)}
+        {board.map((row, index) => <div className="row" key={index}>
+          {row.map((cell, cellIdx) => <MicroCell symbol={cell.symbol} key={cellIdx} />)}
         </div>)}
       </div>
     );

@@ -1,0 +1,37 @@
+.spinnerfield {
+  width: 140px;
+  font-size: 1.5em;
+
+  user-select: none;
+  -webkit-user-select: none;
+
+  .spincontrol {
+    height: 40px;
+    vertical-align: super;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 12px;
+
+    &:active {
+      opacity: 0.6;
+      -webkit-transition: -webkit-transform 0.1s, opacity 0.05s;
+      transition: transform 0.1s, opacity 0.05s;
+      transform: scale(0.8);
+      -webkit-transform: scale(0.8);
+    }
+  }
+
+  .spinner {
+    height: 40px;
+    width: 60px;
+
+    position: relative;
+    display: inline-block;
+
+    text-align: center;
+    line-height: 40px;
+    font-size: 2em;
+    
+    cursor: default;
+  }
+}
