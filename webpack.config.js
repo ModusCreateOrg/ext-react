@@ -30,6 +30,14 @@ module.exports = {
     {
       test: /\.less$/,
       loader: 'style!css!less'
+    },
+    {
+      test: /\.css$/,
+      loader: 'style!css'
+    },
+    {
+      test: /\.woff|\.woff2|\.svg|.eot|\.ttf/,
+      loader: 'file-loader'
     }],
   },
 };
