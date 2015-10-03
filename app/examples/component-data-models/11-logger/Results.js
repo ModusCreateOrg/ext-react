@@ -14,6 +14,10 @@ export default class Results extends Component {
     onSuccess: PropTypes.func
   }
 
+  shouldComponentUpdate(nextProps) {
+    return nextProps.game !== this.props.game;
+  }
+
   onSpinnerChange(newValue, oldValue, spinner, symbol) {
     const { game, onSuccess } = this.props;
     let notSolved;

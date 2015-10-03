@@ -46,7 +46,7 @@ export default class Game {
 
   unknowns = 3
 
-  maxValue = 20
+  maxValue = 10
 
   gameSymbols = []
 
