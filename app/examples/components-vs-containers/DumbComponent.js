@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import ObjectImage from './ObjectImage';
 import TwitterLink from './TwitterLink';
 
-export default class DumbComponent extends React.Component {
+export default class DumbComponent extends Component {
   static propTypes = {
     contacts: PropTypes.array.isRequired
   }

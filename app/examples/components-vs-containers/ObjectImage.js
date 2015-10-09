@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-export default class ObjectImage extends React.Component {
+export default class ObjectImage extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired
   }

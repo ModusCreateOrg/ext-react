@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-export default class TwitterLink extends React.Component {
+export default class TwitterLink extends Component {
   static propTypes = {
     handle: PropTypes.string.isRequired
   }
