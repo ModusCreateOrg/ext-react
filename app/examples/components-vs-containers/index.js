@@ -1,0 +1,1 @@
+export SmartContainer from './SmartContainer';
