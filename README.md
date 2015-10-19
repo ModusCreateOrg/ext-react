@@ -44,7 +44,7 @@ Bonus steps. These are not required, but may be fun or helpful.
 - [ ] Flux
 - [ ] Flux vs MVC/MVVC/MVVM
 - [ ] Stateless components (may require the next version of React)
-- [ ] Components vs Containers
+- [x] Components vs Containers
 - [ ] Architecture
   - [ ] Bootstrapping an app from scratch
     - [ ] `npm init`
