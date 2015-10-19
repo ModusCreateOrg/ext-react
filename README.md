@@ -1,6 +1,8 @@
 # ext-react
 Helping Ext JS developers get up to speed with React
 
+Live examples can be found here: http://extreact.herokuapp.com/
+
 ## Q&A
 **Q:** `sencha app watch` doesn't work here. How do I run this thing?
 
