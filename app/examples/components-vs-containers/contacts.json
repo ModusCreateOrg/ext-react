@@ -1,0 +1,70 @@
+{
+    "contacts": [
+        {
+            "id": 10,
+            "name": "Alexandru Lazar",
+            "image": "http://moduscreate.com/wp-content/uploads/2011/03/Alex-350x350.jpg",
+            "twitter": "alexfrommodus"
+        },
+        {
+            "id": 20,
+            "name": "Bogdan Lusco",
+            "image": "http://moduscreate.com/wp-content/uploads/2015/08/Bogdan-Iusco-350x350.jpg",
+            "twitter": "bogdanlusco"
+        },
+        {
+            "id": 30,
+            "name": "Crysfel Villa",
+            "image": "http://moduscreate.com/wp-content/uploads/2014/05/CrysfelSquare-350x350.jpg",
+            "twitter": "crysfel"
+        },
+        {
+            "id": 40,
+            "name": "Geoff Bishop",
+            "image": "http://moduscreate.com/wp-content/uploads/2013/03/GeoffSquare-350x350.jpg",
+            "twitter": "gabishop"
+        },
+        {
+            "id": 45,
+            "name": "Jay Garcia",
+            "image": "jay-garcia.jpg",
+            "twitter": "modusjesus"
+        },
+        {
+            "id": 50,
+            "name": "Jaymes Jones",
+            "image": "http://moduscreate.com/wp-content/uploads/2011/03/JD-350x350.jpg",
+            "twitter": "jaymes_jones"
+        },
+        {
+            "id": 60,
+            "name": "Mallory Mooney",
+            "image": "http://moduscreate.com/wp-content/uploads/2015/02/mallory_350x350-350x350.jpg",
+            "twitter": "malmoo20"
+        },
+        {
+            "id": 70,
+            "name": "Misha Manulis",
+            "image": "http://moduscreate.com/wp-content/uploads/2015/02/misha_350x350-350x350.jpg",
+            "twitter": "mmanulis"
+        },
+        {
+            "id": 75,
+            "name": "Patrick Sheridan",
+            "image": null,
+            "twitter": "sheridap"
+        },
+        {
+            "id": 80,
+            "name": "Sergiu Popescu",
+            "image": "http://moduscreate.com/wp-content/uploads/2015/08/Sergiu-Popescu-350x350.jpg",
+            "twitter": "popescunsergiu"
+        },
+        {
+            "id": 90,
+            "name": "Timothy Eagan",
+            "image": "http://moduscreate.com/wp-content/uploads/2011/03/Tim-350x350.jpg",
+            "twitter": "timothyeagan"
+        }
+   ]
+}

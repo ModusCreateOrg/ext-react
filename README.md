@@ -1,6 +1,8 @@
 # ext-react
 Helping Ext JS developers get up to speed with React
 
+Live examples can be found here: http://extreact.herokuapp.com/
+
 ## Q&A
 **Q:** `sencha app watch` doesn't work here. How do I run this thing?
 
@@ -42,7 +44,7 @@ Bonus steps. These are not required, but may be fun or helpful.
 - [ ] Flux
 - [ ] Flux vs MVC/MVVC/MVVM
 - [ ] Stateless components (may require the next version of React)
-- [ ] Components vs Containers
+- [x] Components vs Containers
 - [ ] Architecture
   - [ ] Bootstrapping an app from scratch
     - [ ] `npm init`
