@@ -1,13 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Board from './Board';
 import Game from './Game';
 import Results from './Results';
 import './game.less';
 
 export default class App extends Component {
+  static childContextTypes = {
+    game: PropTypes.instanceOf(Game)
+  }
+
   state = {
     success: false,
     game: new Game()
+  }
+
+  getChildContext() {
+    return {
+      game: this.state.game
+    };
   }
 
   onSuccess() {

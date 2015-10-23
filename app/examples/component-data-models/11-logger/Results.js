@@ -7,19 +7,22 @@ const SymbolValueInput = ({ symbol, onChange }) => (
   </div>
 );
 
-
 export default class Results extends Component {
   static propTypes = {
-    game: PropTypes.object,
     onSuccess: PropTypes.func
   }
 
+  static contextTypes = {
+    game: PropTypes.object
+  }
+
   shouldComponentUpdate(nextProps) {
-    return nextProps.game !== this.props.game;
+    return nextProps.game !== this.context.game;
   }
 
   onSpinnerChange(newValue, oldValue, spinner, symbol) {
-    const { game, onSuccess } = this.props;
+    const { onSuccess } = this.props;
+    const { game } = this.context;
     let notSolved;
 
     if (newValue === spinner.props.targetValue) {
@@ -36,7 +39,7 @@ export default class Results extends Component {
   }
 
   render() {
-    const { gameSymbols } = this.props.game;
+    const { gameSymbols } = this.context.game;
 
     return (
       <div className="results">
