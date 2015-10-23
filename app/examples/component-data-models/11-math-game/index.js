@@ -1,0 +1,1 @@
+export MathGame from './App';
