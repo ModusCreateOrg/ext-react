@@ -1,0 +1,1 @@
+export LifeCycle from './LifeCycle';

@@ -32,6 +32,7 @@ Bonus steps. These are not required, but may be fun or helpful.
 - [x] Class system
   - [x] Hello World
   - [x] Hello user
+- [ ] Component life cycle
 - [ ] Component data models
   - [ ] Properties
   - [ ] State
