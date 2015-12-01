@@ -6,7 +6,7 @@ export default class Badge extends Component {
   // Set PropTypes for our component to make it obvious that it expects an array of contacts
   static propTypes = {
     subhead : PropTypes.string,
-    value   : PropTypes.string
+    value   : PropTypes.number
   }
 
   render() {
