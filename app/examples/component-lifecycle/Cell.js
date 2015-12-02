@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 
 export default class Cell extends Component {
 
-  // Set PropTypes for our component to make it obvious that it expects an array of contacts
+  // Set PropTypes for our component to make it obvious what it expects
   static propTypes = {
     cell  : PropTypes.object.isRequired,
     unit  : PropTypes.string,

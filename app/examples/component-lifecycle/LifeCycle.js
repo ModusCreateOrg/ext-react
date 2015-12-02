@@ -20,13 +20,14 @@ export default class Lifecycle extends Component {
       oldCell : '#A6A6A6'
     };
 
-    this.generation    = 0;
-    this.maxGeneration = 400;
+    this.generation    = 1;
+    this.maxGeneration = 200;
     this.intervalTime  = 100;
 
     // If you need to set an initial empty state, do that here.
     this.state = {
-      cells: {}
+      cells  : {},
+      paused : true
     };
   }
 
@@ -52,8 +53,6 @@ export default class Lifecycle extends Component {
     this.setState({
       cells: Object.assign({}, seed)
     });
-
-    this.intervalId = setInterval(this.updateCells.bind(this), this.intervalTime);
   }
 
   // You can think of this as something of a "setter" for the component. It gets called when new props are set.
@@ -66,7 +65,7 @@ export default class Lifecycle extends Component {
    * Note: this is not called for the initial render.
    */
   shouldComponentUpdate(nextProps, nextState) {
-    if (Object.keys(nextState).length === 0 || this.generation >= this.maxGeneration) {
+    if (Object.keys(nextState.cells).length === 0 || this.generation > this.maxGeneration) {
       this.endSimulation();
       return false;
     }
@@ -88,12 +87,22 @@ export default class Lifecycle extends Component {
     this.endSimulation();
   }
 
+  onButtonClick() {
+    if (this.state.paused) {
+      this.startSimulation();
+    } else {
+      this.endSimulation();
+    }
+  }
+
   render() {
-    var { cells } = this.state,
-        cellKeys  = Object.keys(cells);
+    let { cells, paused } = this.state,
+        cellKeys  = Object.keys(cells),
+        btnClass  = "button badge " + (paused ? 'play' : 'pause');
 
     return (
       <div className="board">
+        <div className={btnClass} onClick={this.onButtonClick.bind(this)}></div>
         <Badge subhead="gen"   value={this.generation} />
         <Badge subhead="cells" value={cellKeys.length} />
         {cellKeys.map(key => <Cell key={key} cell={ cells[key] } /> )}
@@ -196,8 +205,18 @@ export default class Lifecycle extends Component {
     return this.state.cells[`x${xPos}y${yPos}`];
   }
 
+  startSimulation() {
+    this.intervalId = setInterval(this.updateCells.bind(this), this.intervalTime);
+    this.setState({paused: false});
+  }
+
   endSimulation() {
-    clearInterval(this.intervalId);
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
+    if (!this.state.paused) {
+      this.setState({paused: true});
+    }
   }
 
 }

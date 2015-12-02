@@ -4,6 +4,22 @@
 .board {
     position: relative;
 
+    .button.badge {
+        font-size: 28px;
+        line-height: 50px;
+        text-align: center;
+
+        &::before {
+            .ion();
+        }
+        &.play::before {
+            content: @ionicon-var-play;
+        }    
+        &.pause::before {
+            content: @ionicon-var-pause;
+        }    
+    }
+
     .generation {
         width         : 40px;
         height        : 40px;
