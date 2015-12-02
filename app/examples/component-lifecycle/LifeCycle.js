@@ -21,8 +21,8 @@ export default class Lifecycle extends Component {
     };
 
     this.generation    = 0;
-    this.maxGeneration = 200;
-    this.intervalTime  = 200;
+    this.maxGeneration = 400;
+    this.intervalTime  = 100;
 
     // If you need to set an initial empty state, do that here.
     this.state = {
@@ -42,11 +42,11 @@ export default class Lifecycle extends Component {
   componentDidMount() {
     // R-pentomino
     let seed = {
-      x20y25 : { xPos : 20, yPos : 25 },
-      x21y25 : { xPos : 21, yPos : 25 },
-      x21y26 : { xPos : 21, yPos : 26 },
-      x22y26 : { xPos : 22, yPos : 26 },
-      x21y27 : { xPos : 21, yPos : 27 }
+      x40y35 : { xPos : 40, yPos : 35 },
+      x41y35 : { xPos : 41, yPos : 35 },
+      x41y36 : { xPos : 41, yPos : 36 },
+      x42y36 : { xPos : 42, yPos : 36 },
+      x41y37 : { xPos : 41, yPos : 37 }
     };
 
     this.setState({
