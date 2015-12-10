@@ -21,7 +21,7 @@ export default class Lifecycle extends Component {
     };
 
     this.generation    = 1;
-    this.maxGeneration = 200;
+    this.maxGeneration = 999;
     this.intervalTime  = 100;
 
     // If you need to set an initial empty state, do that here.
@@ -111,31 +111,56 @@ export default class Lifecycle extends Component {
   }
 
   updateCells() {
-    var cells   = Object.assign({}, this.state.cells),
+    var currGen = this.state.cells,
         nextGen = {},
-        cellKeys;
+        cells, cellKeys;
 
     // reset cell colors
-    cellKeys = Object.keys(cells);
-    cellKeys.forEach(cellKey => cells[cellKey].color = this.colors.oldCell);
+    cellKeys = Object.keys(currGen);
+    cellKeys.forEach(cellKey => currGen[cellKey].color = this.colors.oldCell);
+
+    // remove existing dead cells
+    this.exfoliate(currGen);
 
     // fill cells object with dead neighbors
+    cells = Object.assign({}, currGen),
     this.addDeadNeighborCells(cells);
 
     cellKeys = Object.keys(cells);
     cellKeys.forEach(function(cellKey) {
-      let cell = cells[cellKey];
+      let cell    = cells[cellKey],
+          isAlive = this.shouldCellLive(cell);
 
-      if (this.shouldCellLive(cell)) {
+      if (isAlive) {
         delete cell.dead;
         nextGen[cellKey] = cell;
       }
+
+      if (!isAlive && currGen[cellKey] && !currGen[cellKey].dead) {
+        cell.dead = true;
+        nextGen[cellKey] = cell;
+      }
+
     }, this);
 
-    // update state    
+    // update dead cells with a transition class
+
+    // update state
     this.setState({
       cells: nextGen
     });
+  }
+
+  exfoliate(cells) {
+    var cellKeys = Object.keys(cells);
+
+    cellKeys.forEach(function(cellKey) {
+      let cell = cells[cellKey];
+
+      if (cell.dead) {
+        delete cells[cellKey];
+      }
+    }, this);    
   }
 
   addDeadNeighborCells(cells) {
