@@ -15,18 +15,14 @@ export default class Cell extends Component {
   static defaultProps = {
     unit    : 'rem',
     basis   : 1,
-    color   : '#000',
-    animate : false
+    color   : '#000'
   }
 
   render() {
-    let {cell, animate} = this.props,
-        className;
-
-    className = 'cell ' + (cell.dead? 'dead ' : '') + (animate? 'animate ' : '');
+    let {cell} = this.props;
 
     return (
-      <div className={ className } style={ this.buildCellStyle(cell) }></div>
+      <div className="cell" style={ this.buildCellStyle(cell) }></div>
     );
   }
 
